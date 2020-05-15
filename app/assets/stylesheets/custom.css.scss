@@ -1,0 +1,95 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+html, body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 100%;
+}
+
+h1 {
+  font-family: cursive;
+}
+
+.navbar, footer {
+  background-color: rgb(196, 186, 250) !important;
+}
+
+.navbar-brand {
+  color: rgb(90, 70, 255) !important;
+  font-family: cursive;
+  font-size: 1.75em;
+}
+
+.btn-success {
+  background-color: rgb(2, 133, 30);
+  border-color: rgb(2, 133, 30);
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 105px;
+}
+
+.btn-success:hover {
+  background-color: rgb(3, 177, 41);
+  border-color: rgb(3, 177, 41);
+}
+
+.btn-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle {
+  background-color: rgb(3, 177, 41);
+  border-color: rgb(3, 177, 41);
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.dropdown-toggle:focus {
+  background-color: rgb(3, 177, 41);
+  box-shadow: 0 0 0 0.2rem rgba(3, 177, 41, 0.5);
+}
+
+.btn-outline-success {
+  color: rgb(3, 156, 36);
+  border-color: rgb(3, 156, 36);
+  border-radius: 6px;
+}
+
+.btn-outline-success:hover {
+  color: rgb(196, 186, 250);
+  background-color: rgb(3, 156, 36);
+  border-color: rgb(3, 156, 36);
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle {
+  color: rgb(196, 186, 250);
+  background-color: rgb(3, 156, 36);
+  border-color: rgb(3, 156, 36);
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(3, 156, 36, 0.5);
+}
+
+#home-container {
+  margin-top: 25px;
+  color: #fff;
+}
+
+.jumbotron {
+  border-radius: 10px;
+}
+
+#jumbo-home {
+  background-image: asset-url('jumbo-home.jpg');
+  background-size: cover;
+  opacity: 0.9;
+  height: 425px;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: #eee0ee;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+input.form-control {
+  background-color: #eee0ee;
+  border-radius: 6px;
+}
