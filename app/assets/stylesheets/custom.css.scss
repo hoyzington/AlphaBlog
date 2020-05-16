@@ -3,9 +3,14 @@
 html, body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   height: 100%;
+  background-color: #e6e0ee;
 }
 
 h1 {
+  font-family: cursive;
+}
+
+h3 {
   font-family: cursive;
 }
 
@@ -13,55 +18,66 @@ h1 {
   background-color: rgb(196, 186, 250) !important;
 }
 
-.navbar-brand {
-  color: rgb(90, 70, 255) !important;
+.link-to-lg {
+  color: rgb(80, 60, 245);
   font-family: cursive;
   font-size: 1.75em;
 }
 
-.btn-success {
+.link-to-sm {
+  color: rgb(80, 60, 245);
+}
+
+.link-to-lg:hover, .link-to-sm:hover {
+  color: rgba(90, 70, 255, 0.75);
+  text-decoration-line: none;
+}
+
+.btn {
   background-color: rgb(2, 133, 30);
-  border-color: rgb(2, 133, 30);
+  color: white;
   margin-left: 15px;
   margin-right: 15px;
   width: 105px;
 }
 
-.btn-success:hover {
+.btn:hover {
   background-color: rgb(3, 177, 41);
-  border-color: rgb(3, 177, 41);
+  color: white;
 }
 
-.btn-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle {
+.btn:not(:disabled):not(.disabled):active, .show > .btn.dropdown-toggle {
   background-color: rgb(3, 177, 41);
-  border-color: rgb(3, 177, 41);
+  color: white;
 }
 
-.btn-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.dropdown-toggle:focus {
+.btn:not(:disabled):not(.disabled):active:focus, .show > .btn.dropdown-toggle:focus {
   background-color: rgb(3, 177, 41);
+  color: white;
   box-shadow: 0 0 0 0.2rem rgba(3, 177, 41, 0.5);
 }
 
-.btn-outline-success {
-  color: rgb(3, 156, 36);
-  border-color: rgb(3, 156, 36);
-  border-radius: 6px;
+nav .btn {
+  background-color: rgba(80, 60, 245, 0.75);
+  margin-left: 0px;
+  margin-right: 0px;
+  width: auto;
 }
 
-.btn-outline-success:hover {
-  color: rgb(196, 186, 250);
-  background-color: rgb(3, 156, 36);
-  border-color: rgb(3, 156, 36);
+nav .btn:hover {
+  background-color: rgba(80, 60, 245, 0.5);
+  color: white;
 }
 
-.btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle {
-  color: rgb(196, 186, 250);
-  background-color: rgb(3, 156, 36);
-  border-color: rgb(3, 156, 36);
+nav .btn:not(:disabled):not(.disabled):active, .show > .btn.dropdown-toggle {
+  background-color: rgba(80, 60, 245, 0.5);
+  color: white;
 }
 
-.btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(3, 156, 36, 0.5);
+nav .btn:not(:disabled):not(.disabled):active:focus, .show > .btn.dropdown-toggle:focus {
+  background-color: rgba(80, 60, 245, 0.5);
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(80, 60, 245, 0.25);
 }
 
 #home-container {
@@ -82,7 +98,6 @@ h1 {
 
 #page-content {
   flex: 1 0 auto;
-  background-color: #eee0ee;
 }
 
 #sticky-footer {
@@ -90,6 +105,43 @@ h1 {
 }
 
 input.form-control {
-  background-color: #eee0ee;
+  background-color: #e6e0ee;
   border-radius: 6px;
+}
+
+.article-box {
+  border-radius: 10px;
+  background-image: asset-url('card-index.jpg');
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.8;
+  border-bottom: solid 1px darkgray;
+
+}
+
+.card-header {
+  background-color: transparent;
+  border-style: none;
+}
+
+.card-body {
+  background-color: white;
+  border-top: solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
+  padding-left: 65px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+}
+
+.card-body p {
+  text-align: left !important;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-style: none;
+}
+
+.card-footer a {
+  color: rgb(90, 70, 255) !important;
 }

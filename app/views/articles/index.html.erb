@@ -1,27 +1,22 @@
-<h1>Articles listing page</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan='3'>Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |a| %>
-    <tr>
-      <td><%= a.title %></td>
-      <td><%= a.description %></td>
-      <td><%= link_to 'Show', article_path(a) %></td>
-      <td><%= link_to 'Edit', edit_article_path(a) %></td>
-      <td><%= link_to 'Delete', article_path(a), method: :delete, data: {confirm: 'Are you sure?'} %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<p>
-  <%= link_to 'Create New Article', new_article_path %>
-</p>
+<div class="container">
+  <% @articles.each do |a| %>
+    <div class="row justify-content-md-center">
+      <div class="col-10 mt-4">
+        <div class="card article-box text-center shadow mt-3">
+          <div class="card-header pb-1">
+            <%= link_to a.title, a, class: "link-to-lg" %>
+            <h6 class="text-muted">2 days ago</h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title font-italic">by <%= link_to "Author Authorton", "#", class: "link-to-sm" %></h6>
+            <p class="card-text"><%= truncate("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit veritatis sint, ducimus amet tempore nemo iure quis saepe maxime veniam nostrum. Autem, assumenda ad. Temporibus nisi facilis ab aliquam.", length: 200) %></p>
+          </div>
+          <div class="card-footer">
+            <%= link_to 'Edit', edit_article_path(a), role: "button" %>
+            <%= link_to 'Delete', article_path(a), method: :delete, data: {confirm: 'Are you sure?'} %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
