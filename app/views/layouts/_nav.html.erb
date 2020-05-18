@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light px-4">
 
-  <%= link_to "LovelyBlog", root_path, class: "link-to-lg my-1 mr-3", id: "logo" %>
+  <%= link_to "LovelyBlog", root_path, class: "link-blue link-lg my-1 mr-4", id: "logo" %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,27 +14,16 @@
       <li class="nav-item active">
         <%= link_to "Write", new_article_path, class: "nav-link" %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="nav-item active">
+        <%= link_to "Account", root_path, class: "nav-link" %>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <li class="nav-item active">
+        <%= link_to "About", about_path, class: "nav-link" %>
       </li>
     </ul>
     <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-nav my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" aria-label="Search">
+      <button class="btn btn-blue my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
