@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>LovelyBlog</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
   </head>
 
   <body class="d-flex flex-column">
@@ -17,8 +18,8 @@
     </div>
   </body>
 
-  <footer id="sticky-footer" class="py-4">
-    <div class="container text-center">
+  <footer id="sticky-footer" class="py-2">
+    <div class="text-center">
       <small>Copyright &copy; <%= Time.now.year %> Scott Hoisington </small>
     </div>
   </footer>
