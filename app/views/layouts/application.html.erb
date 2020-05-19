@@ -11,14 +11,14 @@
   </head>
 
   <body class="d-flex flex-column">
-      <%= render 'layouts/nav' %>
+    <%= render 'layouts/nav' %>
     <div id="page-content">
       <%= render 'layouts/msgs' %>
       <%= yield %>
     </div>
   </body>
 
-  <footer id="sticky-footer" class="py-2">
+  <footer class="py-2">
     <div class="text-center">
       <small>Copyright &copy; <%= Time.now.year %> Scott Hoisington </small>
     </div>

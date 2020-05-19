@@ -5,16 +5,19 @@
 html, body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   height: 100%;
-  background-color: #edeaf1;
+  background-color: #EDEAF1;
   color: rgb(60, 60, 60);
 }
 
-h1, h2, h3 {
+.title {
   font-family: cursive;
 }
 
 .container {
   color: rgb(255, 245, 250);
+  position: relative;               
+  top: 50%;                         
+  transform: translate(0, -50%)
 }
 
 .form-control {
@@ -27,7 +30,10 @@ h1, h2, h3 {
   background-size: cover;
   height: 65%;
   width: 90%;
-  // color: rgb(255, 245, 250);
+  margin: auto;
+}
+
+.alert {
   margin-left: auto;
   margin-right: auto;
 }
@@ -41,14 +47,15 @@ h1, h2, h3 {
 // Navbar and Footer
 
 .navbar, footer {
-  background-color: rgb(201, 191, 255) !important;
+  background-color: rgb(201, 191, 255);
 }
 
-// #logo {
+.navbar {
+  margin-bottom: 20px;
+}
 
-// }
-
-#sticky-footer {
+footer {
+  margin-top: 20px;
   flex-shrink: none;
 }
 
@@ -85,10 +92,6 @@ h1, h2, h3 {
   color: white;
 }
 
-// .btn-sm, .btn-sm:hover, .btn-sm:not(:disabled):not(.disabled):active, .show > .btn-sm.dropdown-toggle, .btn-sm:not(:disabled):not(.disabled):active:focus, .show > .btn-sm.dropdown-toggle:focus {
-//   width: 75px;
-// }
-
 .btn-lg, .btn-lg:hover, .btn-lg:not(:disabled):not(.disabled):active, .show > .btn-lg.dropdown-toggle, .btn-lg:not(:disabled):not(.disabled):active:focus, .show > .btn-lg.dropdown-toggle:focus {
   width: 105px;
 }
@@ -119,25 +122,19 @@ h1, h2, h3 {
   box-shadow: 0 0 0 0.2rem rgba(25, 200, 65, 0.5);
 }
 
-.btn-red {
-  background-color: rgb(151, 82, 3);
+.btn-brown {
+  background-color: rgb(125, 60, 5);
 }
 
-.btn-red:hover, .btn-red:not(:disabled):not(.disabled):active, .show > .btn-red.dropdown-toggle, .btn-red:not(:disabled):not(.disabled):active:focus, .show > .btn-red.dropdown-toggle:focus {
-  background-color: rgb(190, 1, 42);
+.btn-brown:hover, .btn-brown:not(:disabled):not(.disabled):active, .show > .btn-brown.dropdown-toggle, .btn-brown:not(:disabled):not(.disabled):active:focus, .show > .btn-brown.dropdown-toggle:focus {
+  background-color: rgb(165, 80, 10);
 }
 
-.btn-red:not(:disabled):not(.disabled):active:focus, .show > .btn-red.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(190, 1, 42, 0.25);
+.btn-brown:not(:disabled):not(.disabled):active:focus, .show > .btn-brown.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(165, 80, 10, 0.25);
 }
 
 // Home & About Pages
-
-.short-page-container {
-  position: relative;               
-  top: 50%;                         
-  transform: translate(0, -50%)
-}
 
 #jumbotron-home {
   background-image: asset-url('jumbo-home.jpg');
@@ -151,28 +148,20 @@ h1, h2, h3 {
 
 // Edit & Create Pages
 
-// .jumbotron {
-//   border-radius: 10px;
-//   background-size: cover;
-//   height: 65%;
-//   width: 90%;
-//   color: rgb(255, 245, 250);
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+.bg {
+  background-repeat: no-repeat;
+  background-size: content-fit;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 .bg-create {
   background-image: asset-url('bg-create');
-  background-size: 100%;
-  border-radius: 10px;
 }
 
 .bg-edit {
   background-image: asset-url('bg-edit');
-  background-position-y: -450px;
-  background-size: 100%;
-  border-radius: 10px;
-  opacity: 0.85;
+  background-position-y: bottom;
 }
 
 // Articles Index Page
@@ -186,7 +175,7 @@ h1, h2, h3 {
   background-size: cover;
   background-position-y: -270px;
   border-radius: 10px;
-  // opacity: 0.8;
+  color: rgb(60, 60, 60);
 }
 
 .card-header, .card-footer {
@@ -208,5 +197,5 @@ h1, h2, h3 {
 }
 
 .card-body p {
-  text-align: left !important;
+  text-align: left;
 }
