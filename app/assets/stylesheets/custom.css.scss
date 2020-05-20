@@ -47,17 +47,90 @@ html, body {
 
 // Navbar and Footer
 
-.navbar, footer {
-  background-color: rgb(201, 191, 255);
+#logo {
+  font-family: cursive;
+  font-size: 1.75em;
 }
 
 .navbar {
   margin-bottom: 20px;
 }
 
+.navbar, footer {
+  background-color: rgb(201, 191, 255);
+}
+
 footer {
   margin-top: 20px;
   flex-shrink: none;
+}
+
+// Home & About Pages
+
+#jumbotron-home {
+  background-image: asset-url('jumbo-home.jpg');
+  opacity: 0.9;
+}
+
+#jumbotron-about {
+  background-image: asset-url('jumbo-about.jpg');
+  background-position: bottom;
+}
+
+// Edit & Create Pages
+
+.bg {
+  background-repeat: no-repeat;
+  background-size: content-fit;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bg-create {
+  background-image: asset-url('bg-create');
+}
+
+.bg-edit {
+  background-image: asset-url('bg-edit');
+  background-position-y: bottom;
+}
+
+// Articles Index Page
+
+.card-articles {
+  border-radius: 10px;
+  color: rgb(60, 60, 60);
+  border-style: none;
+}
+
+.card-header, .card-footer {
+  background-image: asset-url('card-articles.jpg');
+  background-size: cover;
+  border-style: none;
+}
+
+.card-header {
+  background-position-y: -250px;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.card-footer {
+  background-position-y: 270px;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.card-body {
+  height: fit-content;
+  background-color: #F8F8F8;
+  border-top: solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
+  padding: 20px 65px 30px;
+}
+
+.card-body p {
+  text-align: left;
 }
 
 // Links
@@ -80,11 +153,6 @@ footer {
 
 .link-white:hover {
   color: rgb(255, 195, 225);
-}
-
-.link-lg {
-  font-family: cursive;
-  font-size: 1.75em;
 }
 
 // Buttons
@@ -158,81 +226,4 @@ footer {
 
 .btn-red:not(:disabled):not(.disabled):active:focus, .show > .btn-red.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(240, 15, 15, 0.5);
-}
-
-// Home & About Pages
-
-#jumbotron-home {
-  background-image: asset-url('jumbo-home.jpg');
-  opacity: 0.9;
-}
-
-#jumbotron-about {
-  background-image: asset-url('jumbo-about.jpg');
-  background-position: bottom;
-}
-
-// Edit & Create Pages
-
-.bg {
-  background-repeat: no-repeat;
-  background-size: content-fit;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.bg-create {
-  background-image: asset-url('bg-create');
-}
-
-.bg-edit {
-  background-image: asset-url('bg-edit');
-  background-position-y: bottom;
-}
-
-// Articles Index Page
-
-.card {
-  border-radius: 10px;
-  border-style: none;
-}
-
-.card-articles {
-  border-radius: 10px;
-  color: rgb(60, 60, 60);
-}
-
-.card-header, .card-footer {
-  background-image: asset-url('card-articles.jpg');
-  background-size: cover;
-  border-style: none;
-}
-
-.card-header {
-  background-position-y: -250px;
-  border-top-left-radius: 10px !important;
-  border-top-right-radius: 10px !important;
-}
-
-.card-footer {
-  background-position-y: 270px;
-  border-bottom-left-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
-}
-
-.card-body {
-  height: fit-content;
-  background-color: #F8F8F8;
-  border-top: solid 1px lightgray;
-  border-bottom: solid 1px lightgray;
-  padding-bottom: 30px;
-}
-
-.text {
-  padding-left: 65px;
-  padding-right: 65px;
-}
-
-.card-body p {
-  text-align: left;
 }
