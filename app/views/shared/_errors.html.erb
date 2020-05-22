@@ -1,8 +1,14 @@
-<% if @article.errors.any? %>
+<% if obj && obj.errors.any? %>
   <div class="alert alert-danger col-10 alert-dismissible fade show" role="alert">
-    <h4 class="alert-heading">The following errors prevented the article from being saved</h4>
+    <% if obj == @article %>
+      <h4 class="alert-heading">The following errors prevented your article from being saved:</h4>
+    <% elsif obj == @user %>
+      <h4 class="alert-heading">The following errors prevented your account from being created:</h4>
+    <% else %>
+      <h4 class="alert-heading">The following errors occurred:</h4>
+    <% end %>
     <ul>
-      <% @article.errors.full_messages.each do |msg| %>
+      <% obj.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>

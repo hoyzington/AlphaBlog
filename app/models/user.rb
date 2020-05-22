@@ -11,4 +11,8 @@ class User < ApplicationRecord
                     length: {maximum: 105},
                     format: {with: VALID_EMAIL}
 
+  before_save {self.email = self.email.downcase}
+
+  has_secure_password
+
 end
