@@ -3,22 +3,37 @@
 // Global
 
 html, body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  height: 100%;
+  font-family: Verdana, Geneva, sans-serif;
   background-color: #EDEAF1;
   color: rgb(60, 60, 60);
+  height: 100% !important;
+  margin: 0 !important;
 }
 
 .title {
-  color: rgb(255, 245, 250);
+  color: rgb(255, 255, 255);
   font-family: cursive;
 }
 
 .container {
   color: rgb(255, 245, 250);
-  position: relative;               
-  top: 50%;                         
-  transform: translate(0, -50%)
+  // flex: auto;
+  // min-height: fit-content;
+  // height: auto;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.center {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .form-control {
@@ -27,11 +42,25 @@ html, body {
 }
 
 .jumbotron {
+  color: rgb(255, 245, 250);
   border-radius: 10px;
   background-size: cover;
-  height: 65%;
-  width: 90%;
+  // min-height: 297px;
+  width: 65%;
+  // padding-left: 60px;
+  // padding-right: 60px;
+  // padding-top: 80px;
   margin: auto;
+  position: relative;
+  // top: 50%;
+  // -ms-transform: translateY(25%);
+  // transform: translateY(25%);
+}
+
+.jumbotron p {
+  width: 75%;
+  margin: auto;
+  padding-bottom: 2%;
 }
 
 .alert {
@@ -39,10 +68,16 @@ html, body {
   margin-right: auto;
 }
 
+.profile-pic {
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
 // application.html.erb
 
 #page-content {
   flex: auto;
+  height: auto;
 }
 
 // Navbar and Footer
@@ -52,17 +87,16 @@ html, body {
   font-size: 1.75em;
 }
 
-.navbar {
+nav {
   margin-bottom: 20px;
 }
 
 .navbar, footer {
-  background-color: rgb(201, 191, 255);
+  background-color: rgb(215, 210, 245);
 }
 
 footer {
   margin-top: 20px;
-  flex-shrink: none;
 }
 
 // Home & About Pages
@@ -79,12 +113,12 @@ footer {
 
 // Edit & Create Pages
 
-.bg {
-  background-repeat: no-repeat;
-  background-size: content-fit;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+// .bg {
+//   background-repeat: no-repeat;
+//   // background-size: content-fit;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+// }
 
 .bg-create {
   background-image: asset-url('bg-create');
@@ -97,6 +131,12 @@ footer {
 
 // Articles Index Page
 
+.card {
+  // width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card-articles {
   border-radius: 10px;
   color: rgb(60, 60, 60);
@@ -104,7 +144,8 @@ footer {
 }
 
 .card-header, .card-footer {
-  background-image: asset-url('card-articles.jpg');
+  // background-image: asset-url('card-articles.jpg');
+  background-color: rgb(155, 120, 185);
   background-size: cover;
   border-style: none;
 }
@@ -148,11 +189,11 @@ footer {
 }
 
 .link-white {
-  color: rgb(255, 240, 245);
+  color: rgb(255, 255, 255);
 }
 
 .link-white:hover {
-  color: rgb(255, 195, 225);
+  color: rgb(255, 255, 255);
 }
 
 // Buttons
@@ -171,7 +212,8 @@ footer {
       .show > .btn-lg.dropdown-toggle,
       .btn-lg:not(:disabled):not(.disabled):active:focus,
       .show > .btn-lg.dropdown-toggle:focus {
-  width: 105px;
+  min-width: 110px;
+  padding-bottom: 1.25%;
 }
 
 .btn-blue {
@@ -224,7 +266,7 @@ footer {
 
 .btn-brown:not(:disabled):not(.disabled):active:focus,
       .show > .btn-brown.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(165, 80, 10, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(165, 80, 10, 0.5);
 }
 
 .btn-orange {
@@ -241,11 +283,11 @@ footer {
 
 .btn-orange:not(:disabled):not(.disabled):active:focus,
       .show > .btn-orange.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 120, 60, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(255, 120, 60, 0.5);
 }
 
 .btn-red {
-  background-color: rgb(240, 15, 15);
+  background-color: rgb(230, 0, 0);
 }
 
 .btn-red:hover,
@@ -253,10 +295,10 @@ footer {
       .show > .btn-red.dropdown-toggle,
       .btn-red:not(:disabled):not(.disabled):active:focus,
       .show > .btn-red.dropdown-toggle:focus {
-  background-color: rgb(255, 30, 30);
+  background-color: rgb(255, 0, 0);
 }
 
 .btn-red:not(:disabled):not(.disabled):active:focus,
       .show > .btn-red.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(240, 15, 15, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.5);
 }

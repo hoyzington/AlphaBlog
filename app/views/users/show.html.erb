@@ -1,0 +1,28 @@
+<div class="jumbotron bg bg-create col-7 p-5 mt-2 mb-3">
+  <%= gravatar_for @user, size: 200, class: "float-left" %>
+  <div>
+    <h1 class="text-center mt-3 title"><%= @user.username %></h1>
+    <h6 class="text-center mt-2 mb-4"><%= @user.email %></h6>
+    <h4 class="text-center mt-2 mb-2"><%= @articles.count %> Articles</h4>
+    <h5 class="text-center mt-2 mb-3"><i>Joined <%= time_ago_in_words(@user.created_at) %> ago</i></h5>
+  </div>
+</div>
+<div>
+  <% @articles.reverse.each do |article| %>
+    <div class="row justify-content-md-center">
+      <div class="col-6">
+        <div class="card card-articles text-center mt-3 mb-3">
+          <div class="card-header pb-1 pt-3">
+            <h2 class="mb-1"><%= link_to article.title, article, class: "link-white title" %></h2>
+            <h6><%= time_ago_in_words(article.created_at) %> ago</h6>
+          </div>
+          <div class="card-body text">
+            <p class="card-text"><%= truncate("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit veritatis sint, ducimus amet tempore nemo iure quis saepe maxime veniam nostrum. Autem, assumenda ad. Temporibus nisi facilis ab aliquam. Rerum aspernatur quis error rem, adipisci aut. Accusantium illum commodi, veniam quidem maxime corporis sit odio, sunt tempore nemo quis quo harum facilis dolore magnam!", length: 370) %></p>
+          </div> 
+          <div class="card-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

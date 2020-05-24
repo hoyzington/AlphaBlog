@@ -1,19 +1,23 @@
 <div class="row justify-content-md-center">
-  <div class="col-9">
+  <div class="col-7">
     <div class="card card-articles text-center mt-3 mb-4">
       <div class="card-header pb-2 pt-3">
+        <%= link_to 'Edit', edit_article_path, class: "btn btn-orange float-left ml-5 my-3"%>
+        <%= link_to 'Delete', article_path, class: "btn btn-red float-right mr-5 my-3", method: :delete, data: {confirm: "Are you sure?"}%>
         <h1 class= "title mb-1"><%= @article.title %></h1>
         <h6><%= time_ago_in_words(@article.created_at) %> ago</h6>
       </div>
       <div class="card-body text">
-        <h6 class="card-title font-italic mb-4">by <%= link_to @article.user.username, "#", class: "link-blue" %></h6>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit veritatis sint, ducimus amet tempore nemo iure quis saepe maxime veniam nostrum. Autem, assumenda ad. Temporibus nisi facilis ab aliquam. Rerum aspernatur quis error rem, adipisci aut. Accusantium illum commodi, veniam quidem maxime corporis sit odio, sunt tempore nemo quis quo harum facilis dolore magnam!</p>
-        <p class="card-text">Perferendis ex sed eligendi reiciendis corrupti incidunt. Quia veniam repellat maiores corrupti iure quibusdam et voluptas aut! Neque minus quod id eum! Tenetur earum eveniet excepturi quasi sunt odio ab reiciendis repellat necessitatibus voluptatem maiores nobis laudantium unde, dicta aspernatur, fugiat totam doloremque facere.</p>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, magni soluta debitis illum tempore sit dolorum rerum vel vitae qui dolore totam ullam impedit doloremque dolores vero, deserunt quaerat? Voluptatum? Labore vero molestiae esse veritatis aperiam, nemo id repellendus adipisci eligendi, animi excepturi tempora quod omnis odit odio! Delectus, quisquam iure. Laudantium.</p>
+        <h6 class="card-title font-italic mb-4">by <%= link_to (gravatar_for @user, size: 35), @user %> <%= link_to @user.username, @user, class: "link-blue" %></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit veritatis sint, ducimus amet tempore nemo iure quis saepe maxime veniam nostrum. Autem, assumenda ad. Temporibus nisi facilis ab aliquam. Rerum aspernatur quis error rem, adipisci aut. Accusantium illum commodi, veniam quidem maxime corporis sit odio, sunt tempore nemo quis quo harum facilis dolore magnam!</p>
+        <p>Perferendis ex sed eligendi reiciendis corrupti incidunt. Quia veniam repellat maiores corrupti iure quibusdam et voluptas aut! Neque minus quod id eum! Tenetur earum eveniet excepturi quasi sunt odio ab reiciendis repellat necessitatibus voluptatem maiores nobis laudantium unde, dicta aspernatur, fugiat totam doloremque facere.</p>
+        <p>Mollitia, magni soluta debitis illum tempore sit dolorum rerum vel vitae qui dolore totam ullam impedit doloremque dolores vero, deserunt quaerat? Voluptatum? Labore vero molestiae esse veritatis aperiam, nemo id repellendus adipisci eligendi, animi excepturi tempora quod omnis odit odio! Delectus, quisquam iure. Laudantium.</p>
+        <p>Adipisci dolor sapiente sit at, esse, voluptatibus excepturi est corrupti saepe eos iure placeat accusantium cumque rerum laborum, aut dignissimos ad quis. Sint iste, vel reprehenderit omnis tempore nulla architecto voluptatum corrupti atque ipsum doloremque accusantium quasi, suscipit dolor quod neque numquam ab deserunt.</p>
+        <p>Esse quod ut neque ex aliquam libero possimus necessitatibus recusandae architecto! Ex impedit nulla, repellendus consequuntur tenetur odio totam rerum velit eius!</p>
       </div> 
       <div class="card-footer">
-        <%= link_to 'Edit', edit_article_path, class: "btn btn-orange mx-2"%>
-        <%= link_to 'Delete', article_path, class: "btn btn-red mx-2", method: :delete, data: {confirm: "Are you sure?"}%>
+        <%= link_to 'Edit', edit_article_path, class: "btn btn-orange float-left ml-5 "%>
+        <%= link_to 'Delete', article_path, class: "btn btn-red float-right mr-5 ", method: :delete, data: {confirm: "Are you sure?"}%>
       </div>
     </div>
   </div>
