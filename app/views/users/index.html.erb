@@ -1,3 +1,4 @@
+<%= will_paginate @users, class: "apple_pagination mb-2" %>
 <% @users.each do |user| %>
   <div class="row justify-content-md-center">
     <div class="jumbotron bg bg-create col-7 p-5 mt-2 mb-3">
@@ -13,3 +14,4 @@
     </div>
   </div>
 <% end %>
+<%= will_paginate @users, class: "apple_pagination" %>

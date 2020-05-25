@@ -87,6 +87,10 @@ html, body {
   font-size: 1.75em;
 }
 
+// #logo:hover {
+//   text-shadow: 0 0 10px rgba(0, 120, 255, 0.5);
+// }
+
 nav {
   margin-bottom: 20px;
 }
@@ -177,7 +181,7 @@ footer {
 // Links
 
 .link-blue {
-  color: rgb(35, 75, 250);
+  color: rgb(0, 65, 240);
 }
 
 .link-blue:hover {
@@ -194,6 +198,14 @@ footer {
 
 .link-white:hover {
   color: rgb(255, 255, 255);
+}
+
+.link-black {
+  color: rgb(60, 60, 60);
+}
+
+.link-black:hover {
+  color: rgb(0, 120, 255);
 }
 
 // Buttons
@@ -302,3 +314,41 @@ footer {
       .show > .btn-red.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.5);
 }
+
+// Pagination
+
+.apple_pagination {
+  // background: #f1f1f1;
+  // border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+}
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em;
+  }
+  .apple_pagination .disabled {
+    color: #aaaaaa;
+  }
+  .apple_pagination .current {
+    font-style: normal;
+    // font-weight: bold;
+    // background-color: #bebebe;
+    background-color: rgb(215, 210, 245);
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    // text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+  }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black;
+  }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration-line: none;
+      color: rgb(0, 120, 255);
+    }

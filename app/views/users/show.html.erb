@@ -1,12 +1,19 @@
-<div class="jumbotron bg bg-create col-7 p-5 mt-2 mb-3">
-  <%= gravatar_for @user, size: 200, class: "float-left" %>
-  <div>
-    <h1 class="text-center mt-3 title"><%= @user.username %></h1>
-    <h6 class="text-center mt-2 mb-4"><%= @user.email %></h6>
-    <h4 class="text-center mt-2 mb-2"><%= @articles.count %> Articles</h4>
-    <h5 class="text-center mt-2 mb-3"><i>Joined <%= time_ago_in_words(@user.created_at) %> ago</i></h5>
+<div class="row justify-content-md-center">
+  <div class="jumbotron bg bg-create col-7 p-5 mt-2 mb-3">
+    <div class="float-left">
+      <%= gravatar_for @user, size: 200 %>
+    </div>
+    <div>
+      <h1 class="text-center mt-3 title"><%= @user.username %></h1>
+      <h6 class="text-center mt-2 mb-4"><%= @user.email %></h6>
+      <h4 class="text-center mt-2 mb-2"><%= @articles.count %> Articles</h4>
+      <h5 class="text-center mt-2 mb-3"><i>Joined <%= time_ago_in_words(@user.created_at) %> ago</i></h5>
+      <br/><br/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi veniam possimus tempora doloremque, ex eum dolores sed unde, labore alias, id autem iure inventore eligendi mollitia exercitationem ullam modi harum.</p>
+    </div>
   </div>
 </div>
+<%= will_paginate @articles, class: "apple_pagination" %>
 <div>
   <% @articles.reverse.each do |article| %>
     <div class="row justify-content-md-center">
@@ -26,3 +33,4 @@
     </div>
   <% end %>
 </div>
+<%= will_paginate @articles, class: "apple_pagination" %>
