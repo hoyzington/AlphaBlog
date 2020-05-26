@@ -1,11 +1,11 @@
 <% if obj && obj.errors.any? %>
   <div class="alert alert-danger col-10 alert-dismissible fade show" role="alert">
     <% if obj == @article %>
-      <h4 class="alert-heading">The following errors prevented your article from being saved:</h4>
+      <h5 class="alert-heading">The following errors prevented your article from being saved:</h5>
     <% elsif obj == @user %>
-      <h4 class="alert-heading">The following errors prevented your account from being created:</h4>
+      <h5 class="alert-heading">The following errors prevented your account from being created:</h5>
     <% else %>
-      <h4 class="alert-heading">The following errors occurred:</h4>
+      <h5 class="alert-heading">The following errors occurred:</h5>
     <% end %>
     <ul>
       <% obj.errors.full_messages.each do |msg| %>

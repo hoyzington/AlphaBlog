@@ -1,0 +1,4 @@
+<% if !logged_in? %>
+  <%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-green" %>
+  <%= link_to "Log In", login_path, class: "btn btn-lg btn-green" %>
+<% end %>

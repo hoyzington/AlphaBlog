@@ -2,8 +2,8 @@
   <div class="col-7">
     <div class="card card-articles text-center mt-3 mb-4">
       <div class="card-header pb-2 pt-3">
-        <%= link_to 'Edit', edit_article_path, class: "btn btn-orange float-left ml-5 my-3"%>
-        <%= link_to 'Delete', article_path, class: "btn btn-red float-right mr-5 my-3", method: :delete, data: {confirm: "Are you sure?"}%>
+        <%= edit_button %>
+        <%= delete_button %>
         <h1 class= "title mb-1"><%= @article.title %></h1>
         <h6><%= time_ago_in_words(@article.created_at) %> ago</h6>
       </div>
@@ -16,8 +16,8 @@
         <p>Esse quod ut neque ex aliquam libero possimus necessitatibus recusandae architecto! Ex impedit nulla, repellendus consequuntur tenetur odio totam rerum velit eius!</p>
       </div> 
       <div class="card-footer">
-        <%= link_to 'Edit', edit_article_path, class: "btn btn-orange float-left ml-5 "%>
-        <%= link_to 'Delete', article_path, class: "btn btn-red float-right mr-5 ", method: :delete, data: {confirm: "Are you sure?"}%>
+        <%= edit_button %>
+        <%= delete_button %>
       </div>
     </div>
   </div>

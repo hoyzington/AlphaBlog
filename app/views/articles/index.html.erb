@@ -1,3 +1,4 @@
+<%= render "layouts/enjoy_more"%>
 <%= will_paginate @articles, class: "apple_pagination mb-1" %>
 <% @articles.reverse.each do |article| %>
   <div class="row justify-content-md-center">
@@ -18,3 +19,4 @@
   </div>
 <% end %>
 <%= will_paginate @articles, class: "apple_pagination mb-1" %>
+<%= render "layouts/enjoy_more" %>
