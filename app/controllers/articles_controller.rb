@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
 
   before_action :set_article, only:[:show, :edit, :update, :destroy]
+  before_action :require_user, except:[:show, :index]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def index
-    @articles = Article.all.paginate(page: params[:page], per_page: 2)
+    @articles = Article.all.paginate(page: params[:page], per_page: 5)
   end
 
   def show

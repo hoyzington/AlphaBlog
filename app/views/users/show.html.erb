@@ -1,4 +1,12 @@
 <div class="row justify-content-md-center">
+  <% if logged_in? && @user == current_user %>
+    <%= link_to 'Edit Profile', edit_user_path(current_user), class: "btn btn-orange mx-5 my-3" %>
+  <% end %>
+  <% if logged_in? && @user == current_user %>
+    <%= link_to 'Delete Account', user_path(current_user), class: "btn btn-red mx-5 my-3", method: :delete, data: {confirm: "This will also delete your articles and cannot be undone! Are you sure?"} %>
+  <% end %>
+</div>
+<div class="row justify-content-md-center">
   <div class="jumbotron bg bg-create col-7 p-5 mt-2 mb-3">
     <div class="float-left">
       <%= gravatar_for @user, size: 200 %>
