@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 
   before_action :set_article, only:[:show, :edit, :update, :destroy]
+  before_action :set_user, only:[:show, :edit]
   before_action :require_user, except:[:show, :index]
   before_action :admin_or_same_user, only: [:edit, :update, :destroy]
 
@@ -9,7 +10,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @user = @article.user
   end
 
   def new
@@ -48,6 +48,10 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def set_user
+    @user = @article.user
   end
 
   def article_params
