@@ -2,8 +2,8 @@
   <% if logged_in? && @user == current_user %>
     <%= link_to 'Edit Profile', edit_user_path(current_user), class: "btn btn-orange mx-5 my-3" %>
   <% end %>
-  <% if logged_in? && @user == current_user %>
-    <%= link_to 'Delete Account', user_path(current_user), class: "btn btn-red mx-5 my-3", method: :delete, data: {confirm: "This will also delete your articles and cannot be undone! Are you sure?"} %>
+  <% if logged_in? && @user == current_user || current_user.admin? %>
+    <%= link_to 'Delete Account', user_path(current_user), class: "btn btn-red mx-5 my-3", method: :delete, data: {confirm: "This will also delete all articles and cannot be undone! Are you sure?"} %>
   <% end %>
 </div>
 <div class="row justify-content-md-center">

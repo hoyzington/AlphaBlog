@@ -9,13 +9,13 @@ module ApplicationHelper
   end
 
   def edit_button
-    if logged_in? && @user == current_user
+    if logged_in? && (@user == current_user || current_user.admin?)
       link_to 'Edit', edit_article_path, class: "btn btn-orange float-left ml-5 my-3"
     end
   end
 
   def delete_button
-    if logged_in? && @user == current_user
+    if logged_in? && (@user == current_user || current_user.admin?)
       link_to 'Delete', article_path, class: "btn btn-red float-right mr-5 my-3", method: :delete, data: {confirm: "Are you sure?"}
     end
   end

@@ -1,6 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg px-4">
   
-  <%= link_to "LovelyBlog", root_path, class: "link-blue my-1 mr-4", id: "logo" %>
+  <%= link_to "LovelyBlog", root_path, class: "link-blue my-1 mr-5", id: "logo" %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
     <ul class="navbar-nav mr-auto">
       <% if logged_in? %>
         <li class="nav-item active">
-          <%= link_to current_user.username, user_path(current_user), class: "nav-link link-black ml-1 mr-4" %>
+          <%= link_to current_user.username + (" (Admin)" if current_user.admin?), user_path(current_user), class: "nav-link link-black mr-4" %>
         </li>
         <li class="nav-item active">
           <%= link_to "Log Out", logout_path, method: :delete, class: "nav-link link-black" %>
