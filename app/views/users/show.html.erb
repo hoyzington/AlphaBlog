@@ -1,14 +1,15 @@
-<div class="row justify-content-md-center">
-  <% if logged_in? && @user == current_user %>
-    <%= link_to 'Edit Profile', edit_user_path(current_user), class: "btn btn-orange mx-5 my-3" %>
-  <% end %>
-  <% if logged_in? && @user == current_user || current_user.admin? %>
-    <%= link_to 'Delete Account', user_path(current_user), class: "btn btn-red mx-5 my-3", method: :delete, data: {confirm: "This will also delete all articles and cannot be undone! Are you sure?"} %>
-  <% end %>
-</div>
-<div class="row justify-content-md-center">
-  <div class="jumbotron bg bg-create col-7 p-5 mt-2 mb-3">
-    <div class="float-left">
+<div class="jumbotron bg-create col-8 mt-3 mb-4">
+  <%= render 'layouts/msgs' %>
+  <div class="text-center">
+    <div>
+      <% if logged_in? && @user == current_user %>
+        <%= link_to 'Edit Profile', edit_user_path(current_user), class: "btn btn-orange mx-3 mb-4" %>
+      <% end %>
+      <% if logged_in? && (@user == current_user || current_user.admin?) %>
+        <%= link_to 'Delete Account', user_path(current_user), class: "btn btn-red mx-3 mb-4", method: :delete, data: {confirm: "This will also delete all articles and cannot be undone! Are you sure?"} %>
+      <% end %>
+    </div><br/>
+    <div id="special" class="float-left">
       <%= gravatar_for @user, size: 200 %>
     </div>
     <div>
@@ -16,17 +17,15 @@
       <h6 class="text-center mt-2 mb-4"><%= @user.email %></h6>
       <h4 class="text-center mt-2 mb-2"><%= pluralize(@articles.count, "Article") %></h4>
       <h5 class="text-center mt-2 mb-3"><i>Joined <%= time_ago_in_words(@user.created_at) %> ago</i></h5>
-      <br/><br/>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi veniam possimus tempora doloremque, ex eum dolores sed unde, labore alias, id autem iure inventore eligendi mollitia exercitationem ullam modi harum.</p>
     </div>
   </div>
+  <br/><br/>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi veniam possimus tempora doloremque, ex eum dolores sed unde, labore alias, id autem iure inventore eligendi mollitia exercitationem ullam modi harum.</p>
 </div>
-<%= will_paginate @articles, class: "apple_pagination" %>
-<div>
+
+  <%= will_paginate @articles, class: "apple_pagination mb-1" %>
   <% @articles.each do |article| %>
-    <div class="row justify-content-md-center">
-      <div class="col-6">
-        <div class="card card-articles text-center mt-3 mb-3">
+        <div class="card card-articles text-center mt-3 mb-4 justify-content-md-center">
           <div class="card-header pb-1 pt-3">
             <h2 class="mb-1"><%= link_to article.title, article, class: "link-white title" %></h2>
             <h6><%= time_ago_in_words(article.created_at) %> ago</h6>
@@ -37,8 +36,6 @@
           <div class="card-footer">
           </div>
         </div>
-      </div>
-    </div>
   <% end %>
-</div>
-<%= will_paginate @articles, class: "apple_pagination" %>
+  <%= will_paginate @articles, class: "apple_pagination mb-1" %>
+

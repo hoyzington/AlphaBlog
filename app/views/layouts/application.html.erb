@@ -11,10 +11,10 @@
     <%= csp_meta_tag %>
   </head>
 
-  <body class="d-flex flex-column">
-    <div id="page-content" class="wrapper">
+  <body>
+    <div class="wrapper">
       <%= render 'layouts/nav' %>
-      <%= render 'layouts/msgs' %>
+      
       <%= yield %>
       <%= render 'layouts/footer' %>
     </div>

@@ -1,17 +1,16 @@
+<%= render 'layouts/msgs' %>
 <%= render "layouts/enjoy_more" %>
 <%= will_paginate @users, class: "apple_pagination mb-2" %>
 <% @users.each do |user| %>
-  <div class="row justify-content-md-center">
-    <div class="jumbotron bg bg-create col-7 p-5 mt-2 mb-3">
-      <%= link_to (gravatar_for user, size: 200), user, class: "float-left" %>
-      <div>
-        <h1 class="text-center mt-3 title"><%= link_to user.username, user, class: "link-white" %></h1>
-        <h6 class="text-center mt-2 mb-4"><%= user.email %></h6>
-        <h4 class="text-center mt-2 mb-2"><%= pluralize(user.articles.count, "Article") %></h4>
-        <h5 class="text-center mt-2 mb-3"><i>Joined <%= time_ago_in_words(user.created_at) %> ago</i></h5>
-        <br/><br/>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi veniam possimus tempora doloremque, ex eum dolores sed unde, labore alias, id autem iure inventore eligendi mollitia exercitationem ullam modi harum.</p>
-      </div>
+  <div class="jumbotron bg-create col-7 mt-3 mb-3">
+    <%= link_to (gravatar_for user, size: 200), user, class: "float-left", id: "special" %>
+    <div>
+      <h1 class="text-center mt-3 title"><%= link_to user.username, user, class: "link-white" %></h1>
+      <h6 class="text-center mt-2 mb-4"><%= user.email %></h6>
+      <h4 class="text-center mt-2 mb-2"><%= pluralize(user.articles.count, "Article") %></h4>
+      <h5 class="text-center mt-2 mb-3"><i>Joined <%= time_ago_in_words(user.created_at) %> ago</i></h5>
+      <br/><br/>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi veniam possimus tempora doloremque, ex eum dolores sed unde, labore alias, id autem iure inventore eligendi mollitia exercitationem ullam modi harum.</p>
     </div>
   </div>
 <% end %>

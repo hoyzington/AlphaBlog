@@ -6,8 +6,8 @@ html, body {
   font-family: Verdana, Geneva, sans-serif;
   background-color: #EDEAF1;
   color: rgb(60, 60, 60);
-  height: 100% !important;
-  margin: 0 !important;
+  height: 100%;
+  margin: 0;
 }
 
 .title {
@@ -18,7 +18,7 @@ html, body {
 .container {
   color: rgb(255, 245, 250);
   // flex: auto;
-  // min-height: fit-content;
+  min-height: fit-content;
   // height: auto;
 }
 
@@ -26,6 +26,10 @@ html, body {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+.alert {
+  height: fit-content !important;
 }
 
 .center {
@@ -45,22 +49,18 @@ html, body {
   color: rgb(255, 245, 250);
   border-radius: 10px;
   background-size: cover;
-  // min-height: 297px;
   width: 65%;
-  // padding-left: 60px;
-  // padding-right: 60px;
-  // padding-top: 80px;
   margin: auto;
-  position: relative;
-  // top: 50%;
-  // -ms-transform: translateY(25%);
-  // transform: translateY(25%);
 }
 
 .jumbotron p {
   width: 75%;
   margin: auto;
   padding-bottom: 2%;
+}
+
+#special {
+  padding-left: 120px !important;
 }
 
 .alert {
@@ -70,14 +70,8 @@ html, body {
 
 .profile-pic {
   border-radius: 10px;
-  vertical-align: middle;
-}
-
-// application.html.erb
-
-#page-content {
-  flex: auto;
-  height: auto;
+  // vertical-align: middle;
+  margin: auto;
 }
 
 // Navbar and Footer
@@ -86,10 +80,6 @@ html, body {
   font-family: cursive;
   font-size: 1.75em;
 }
-
-// #logo:hover {
-//   text-shadow: 0 0 10px rgba(0, 120, 255, 0.5);
-// }
 
 nav {
   margin-bottom: 20px;
@@ -117,13 +107,6 @@ footer {
 
 // Edit & Create Pages
 
-// .bg {
-//   background-repeat: no-repeat;
-//   // background-size: content-fit;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-// }
-
 .bg-create {
   background-image: asset-url('bg-create');
 }
@@ -136,9 +119,9 @@ footer {
 // Articles Index Page
 
 .card {
-  // width: 75%;
   margin-left: auto;
   margin-right: auto;
+  width: 55%;
 }
 
 .card-articles {
@@ -148,9 +131,7 @@ footer {
 }
 
 .card-header, .card-footer {
-  // background-image: asset-url('card-articles.jpg');
   background-color: rgb(155, 120, 185);
-  background-size: cover;
   border-style: none;
 }
 
@@ -324,22 +305,18 @@ footer {
 // Pagination
 
 .apple_pagination {
-  // background: #f1f1f1;
-  // border: 1px solid #e5e5e5;
   text-align: center;
-  padding: 1em;
+  // padding: 1em;
   cursor: default;
 }
   .apple_pagination a, .apple_pagination span {
-    padding: 0.2em 0.3em;
+    padding: 0em 0.3em;
   }
   .apple_pagination .disabled {
     color: #aaaaaa;
   }
   .apple_pagination .current {
     font-style: normal;
-    // font-weight: bold;
-    // background-color: #bebebe;
     background-color: rgb(215, 210, 245);
     display: inline-block;
     width: 1.4em;
@@ -348,7 +325,6 @@ footer {
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
     border-radius: 1em;
-    // text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
   }
   .apple_pagination a {
     text-decoration: none;
