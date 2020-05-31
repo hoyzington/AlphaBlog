@@ -1,0 +1,20 @@
+<%= render 'layouts/msgs' %>
+<%= render "layouts/enjoy_more"%>
+<% #will_paginate @categories, class: "apple_pagination mb-1" %>
+<div class="card card-articles">
+  <div class="card-header p-4">
+    <h1 class="text-center display-4 title">Categories</h1>
+  </div>
+  <div class="card-body py-5 text">
+    <% @categories.each do |category| %>
+      <div class="float-left text-center px-4 py-3">
+        <h2><%= link_to category.name, category, class: "link-blue title" %></h2>
+        <h6><%= "23" %> Articles</h6>
+      </div>
+    <% end %>
+  </div> 
+  <div class="card-footer">
+  </div>
+</div>
+<% #will_paginate @articles, class: "apple_pagination mb-1" %>
+<%= render "layouts/enjoy_more" %>
