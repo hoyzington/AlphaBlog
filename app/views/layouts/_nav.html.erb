@@ -29,8 +29,19 @@
       <li class="nav-item active">
         <%= link_to "Articles", articles_path, class: "nav-link link-black" %>
       </li>
-      <li class="nav-item active">
-        <%= link_to "Categories", categories_path, class: "nav-link link-black" %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle link-black" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if logged_in? && current_user.admin? %>
+            <%= link_to "New Category", new_category_path, class: "dropdown-item link-black" %>
+            <div class="dropdown-divider"></div>
+          <% end %>
+          <% nav_categories.each do |cat| %>
+            <%= link_to cat.name, category_path(cat), class: "dropdown-item link-black" %>
+          <% end %>
+        </div>
       </li>
       <li class="nav-item active">
         <%= link_to "Bloggers", users_path, class: "nav-link link-black" %>

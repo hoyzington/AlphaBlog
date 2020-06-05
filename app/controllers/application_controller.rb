@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
 
-  helper_method :current_user, :logged_in?, :require_user, :admin_or_same_user
+  helper_method :nav_categories, :current_user, :logged_in?, :require_user, :admin_or_same_user
+  
+  def nav_categories
+    Category.all
+  end
   
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
