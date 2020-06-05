@@ -9,7 +9,7 @@
       <h4 class="text-center mt-2 mb-2"><%= pluralize(user.articles.count, "Article") %></h4>
       <h5 class="text-center mt-2 mb-3"><i>Joined <%= time_ago_in_words(user.created_at) %> ago</i></h5>
       <br/><br/>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi veniam possimus tempora doloremque, ex eum dolores sed unde, labore alias, id autem iure inventore eligendi mollitia exercitationem ullam modi harum.</p>
+      <p><%= user.bio %></p>
     </div>
   </div>
 <% end %>

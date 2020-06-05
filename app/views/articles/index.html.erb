@@ -1,18 +1,6 @@
 <%= render 'layouts/msgs' %>
 <%= will_paginate @articles, class: "apple_pagination mb-1" %>
 <% @articles.each do |article| %>
-  <div class="card card-articles text-center mt-3 mb-4 justify-content-md-center">
-    <div class="card-header pb-1 pt-3">
-      <h2 class="mb-1"><%= link_to article.title, article, class: "link-white title" %></h2>
-      <h6><%= time_ago_in_words(article.created_at) %> ago</h6>
-      <h3><%= render article.categories %></h3>
-    </div>
-    <div class="card-body text">
-      <h6 class="card-title font-italic">by <%= link_to (gravatar_for article.user, size: 35), article.user %> <%= link_to article.user.username, article.user, class: "link-blue" %></h6>
-      <p class="card-text"><%= truncate("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit veritatis sint, ducimus amet tempore nemo iure quis saepe maxime veniam nostrum. Autem, assumenda ad. Temporibus nisi facilis ab aliquam. Rerum aspernatur quis error rem, adipisci aut. Accusantium illum commodi, veniam quidem maxime corporis sit odio, sunt tempore nemo quis quo harum facilis dolore magnam!", length: 370) %></p>
-    </div> 
-    <div class="card-footer">
-    </div>
-  </div>
+  <%= render article %>
 <% end %>
 <%= will_paginate @articles, class: "apple_pagination mb-1" %>

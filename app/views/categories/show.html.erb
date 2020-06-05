@@ -1,7 +1,11 @@
 <%= render 'layouts/msgs' %>
 <div class="jumbotron bg bg-no-pic col-10 my-4">
-  <%= edit_button %>
-  <%= delete_button %>
+  <% if logged_in? && (@user == current_user || current_user.admin?) %>
+    <%= link_to 'Edit', edit_category_path, class: "btn btn-orange float-left ml-5 my-3" %>
+  <% end %>
+  <% if logged_in? && (@user == current_user || current_user.admin?) %>
+    <%= link_to 'Delete', article_path, class: "btn btn-red float-right mr-5 my-3", method: :delete, data: {confirm: "Are you sure?"} %>
+  <% end %>
   <h1 class= "text-center display-4 title"><%= @category.name %></h1>
 </div>
 <% will_paginate @category_articles, class: "apple_pagination mb-1" %>
