@@ -1,8 +1,9 @@
 <%= render 'layouts/msgs' %>
-<div class="card card-articles text-center mt-3 mb-4">
-  <div class="card-header pb-2 pt-3">
-    <%= edit_button %>
-    <%= delete_button %>
-    <h1 class= "title mb-1"><%= @category.name %></h1>
-  </div>
+<div class="jumbotron bg bg-no-pic col-10 my-4">
+  <%= edit_button %>
+  <%= delete_button %>
+  <h1 class= "text-center display-4 title"><%= @category.name %></h1>
 </div>
+<% will_paginate @category_articles, class: "apple_pagination mb-1" %>
+<%= render @category.articles %>
+<% will_paginate @category_articles, class: "apple_pagination mb-1" %>

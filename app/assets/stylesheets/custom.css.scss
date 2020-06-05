@@ -74,6 +74,16 @@ html, body {
   margin: auto;
 }
 
+.badge {
+  font-family: cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.badge-light {
+  background-color: #EDEAF1;
+}
+
 // Navbar and Footer
 
 #logo {
@@ -131,17 +141,18 @@ footer {
 }
 
 .card-header, .card-footer {
-  background-color: rgb(155, 120, 185);
   border-style: none;
 }
 
 .card-header {
+  background-color: rgb(155, 120, 185);
   background-position-y: -250px;
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
 }
 
 .card-footer {
+  background-color: rgb(215, 210, 245);
   background-position-y: 270px;
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
@@ -168,11 +179,11 @@ footer {
 // Links
 
 .link-blue {
-  color: rgb(0, 65, 240);
+  color: rgb(0, 110, 230);
 }
 
 .link-blue:hover {
-  color: rgb(0, 120, 255);
+  color: rgb(0, 150, 255);
 }
 
 .link-blue:hover, .link-white:hover {
@@ -204,6 +215,7 @@ footer {
       .show > .btn.dropdown-toggle:focus {
   color: white;
   min-width: 75px;
+  border-radius: 6px;
 }
 
 .btn-lg, .btn-lg:hover,

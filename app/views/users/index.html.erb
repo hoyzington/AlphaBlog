@@ -1,5 +1,4 @@
 <%= render 'layouts/msgs' %>
-<%= render "layouts/enjoy_more" %>
 <%= will_paginate @users, class: "apple_pagination mb-2" %>
 <% @users.each do |user| %>
   <div class="jumbotron bg-create col-7 mt-3 mb-3">
@@ -15,4 +14,3 @@
   </div>
 <% end %>
 <%= will_paginate @users, class: "apple_pagination" %>
-<%= render "layouts/enjoy_more" %>

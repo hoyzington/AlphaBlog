@@ -1,11 +1,11 @@
 <%= render 'layouts/msgs' %>
-<%= render "layouts/enjoy_more"%>
 <%= will_paginate @articles, class: "apple_pagination mb-1" %>
 <% @articles.each do |article| %>
   <div class="card card-articles text-center mt-3 mb-4 justify-content-md-center">
     <div class="card-header pb-1 pt-3">
       <h2 class="mb-1"><%= link_to article.title, article, class: "link-white title" %></h2>
       <h6><%= time_ago_in_words(article.created_at) %> ago</h6>
+      <h3><%= render article.categories %></h3>
     </div>
     <div class="card-body text">
       <h6 class="card-title font-italic">by <%= link_to (gravatar_for article.user, size: 35), article.user %> <%= link_to article.user.username, article.user, class: "link-blue" %></h6>
@@ -16,4 +16,3 @@
   </div>
 <% end %>
 <%= will_paginate @articles, class: "apple_pagination mb-1" %>
-<%= render "layouts/enjoy_more" %>
