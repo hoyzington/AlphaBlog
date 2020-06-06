@@ -1,3 +1,4 @@
+<%= render "layouts/enjoy_more" %>
 <%= render 'layouts/msgs' %>
 <div class="jumbotron bg bg-no-pic col-10 my-4">
   <% if logged_in? && (@user == current_user || current_user.admin?) %>
@@ -11,3 +12,4 @@
 <% will_paginate @category_articles, class: "apple_pagination mb-1" %>
 <%= render @category.articles %>
 <% will_paginate @category_articles, class: "apple_pagination mb-1" %>
+<%= render "layouts/enjoy_more" %>

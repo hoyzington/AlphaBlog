@@ -1,3 +1,4 @@
+<%= render "layouts/enjoy_more" %>
 <%= render 'layouts/msgs' %>
 <%= will_paginate @users, class: "apple_pagination mb-2" %>
 <% @users.each do |user| %>
@@ -14,3 +15,4 @@
   </div>
 <% end %>
 <%= will_paginate @users, class: "apple_pagination" %>
+<%= render "layouts/enjoy_more" %>

@@ -3,6 +3,7 @@ Learn how to do reverse pagination
 Change some background pics
 Change Category show jumbotron to blue
 
+Test and Populate Heroku site
 
 USER BIO:
 
