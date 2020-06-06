@@ -5,8 +5,8 @@
     <h3><%= render article.categories %></h3>
   </div>
   <div class="card-body text">
-    <h6 class="card-title font-italic">by <%= link_to (gravatar_for @user, size: 35), @user %> <%= link_to @user.username, @user, class: "link-blue" %></h6>
-    <p class="card-text"><%= truncate(article.content, length: 370) %></p>
+    <h6 class="card-title font-italic">by <%= link_to (gravatar_for article.user, size: 35), article.user %> <%= link_to article.user.username, article.user, class: "link-blue" %></h6>
+    <%= simple_format(truncate(article.content, length: 370), class: 'card-text') %>
   </div> 
   <div class="card-footer">
   </div>

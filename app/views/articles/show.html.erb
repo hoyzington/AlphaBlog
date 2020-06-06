@@ -10,7 +10,7 @@
   </div>
   <div class="card-body text">
     <h6 class="card-title font-italic mt-2 mb-4">by <%= link_to (gravatar_for @user, size: 35), @user %> <%= link_to @user.username, @user, class: "link-blue" %></h6>
-    <p><%= @article.content %>.</p>
+    <%= simple_format(@article.content) %>
   </div> 
   <div class="card-footer">
     <%= edit_button %>
