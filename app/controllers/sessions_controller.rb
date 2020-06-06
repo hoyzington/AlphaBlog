@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Welcome back, #{user.username}!"
       redirect_to user
     else
-      flash.now[:alert] = "There was something wrong with your login details"
+      flash.now[:alert] = "There was something wrong with your login details."
       render 'new'
     end
   end

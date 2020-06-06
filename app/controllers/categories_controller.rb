@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:notice] = "The #{@category.name} category has been created"
+      flash[:notice] = "The #{@category.name} category has been created."
       redirect_to new_category_path
     else
       render "new"
@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      flash[:notice] = "Category successfully updated"
+      flash[:notice] = "This category is now called #{@category.name}."
       redirect_to @category
     else
       render 'edit'
@@ -45,7 +45,7 @@ class CategoriesController < ApplicationController
 
   def require_admin
     if !(logged_in? && current_user.admin?)
-      flash[:alert] = "Unauthorized Action"
+      flash[:alert] = "Unauthorized Action."
       redirect_to categories_path
     end
   end

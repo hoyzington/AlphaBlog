@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Thank you, #{@user.username}, for signing up!"
+      flash[:notice] = "Thanks, #{@user.username}! We can't wait to see what you write."
       redirect_to @user
     else
       render 'new'
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:notice] = "Your account has been updated"
+      flash[:notice] = "Your account has been updated."
       redirect_to @user
     else
       render 'edit'
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     session[:user_id] = nil if @user == current_user
-    flash[:notice] = "Your account and all your articles have been deleted"
+    flash[:notice] = "Your account and all your articles have been deleted."
       redirect_to root_path
   end
   
